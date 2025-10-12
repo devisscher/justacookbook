@@ -14,7 +14,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Recipes', link: '/recipes/' }
+      { text: 'Recipes', link: '/recipes/' },
+      { text: 'Request Recipe', link: 'https://github.com/devisscher/justacookbook/issues/new?template=recipe-request.yml' }
     ],
 
     sidebar: [
@@ -36,7 +37,7 @@ export default defineConfig({
 
     // Footer
     footer: {
-      message: 'No ads, no popups, just recipes.',
+      message: 'No ads, no popups, just recipes. <a href="https://github.com/devisscher/justacookbook/issues/new?template=recipe-request.yml" target="_blank" rel="noopener">Request a recipe</a>',
       copyright: 'Made with ❤️ and VitePress'
     },
 

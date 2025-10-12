@@ -1,0 +1,95 @@
+name: ✏️ Recipe Correction
+description: Report an error or suggest an improvement to an existing recipe
+title: "[Correction]: "
+labels: ["recipe-correction"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found a typo, incorrect measurement, or have a suggestion to improve a recipe? Let us know!
+
+  - type: input
+    id: recipe-name
+    attributes:
+      label: Recipe Name
+      description: Which recipe needs correction?
+      placeholder: e.g., Lohikeitto (Finnish Salmon Soup)
+    validations:
+      required: true
+
+  - type: input
+    id: recipe-url
+    attributes:
+      label: Recipe URL
+      description: Link to the recipe page
+      placeholder: https://devisscher.github.io/justacookbook/recipes/salmon_soup
+    validations:
+      required: false
+
+  - type: dropdown
+    id: correction-type
+    attributes:
+      label: Type of Correction
+      description: What kind of correction is needed?
+      options:
+        - Typo / Spelling Error
+        - Incorrect Measurement
+        - Missing Ingredient
+        - Missing Step
+        - Incorrect Cooking Time/Temperature
+        - Formatting Issue
+        - Image Issue
+        - Improvement Suggestion
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current Content
+      description: What does the recipe currently say? (copy/paste the relevant section)
+      placeholder: |
+        Current text:
+        "Add 1 liter of water..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested Correction
+      description: What should it say instead?
+      placeholder: |
+        Suggested correction:
+        "Add 1.5 liters of water..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reasoning
+    attributes:
+      label: Reasoning
+      description: Why is this correction needed? (Optional but helpful!)
+      placeholder: Explain why this change would improve the recipe
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: tested
+    attributes:
+      label: Have you tried this recipe?
+      options:
+        - label: I have made this recipe and noticed the issue
+        - label: I noticed this while reading the recipe
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other information that might be helpful?
+    validations:
+      required: false
+

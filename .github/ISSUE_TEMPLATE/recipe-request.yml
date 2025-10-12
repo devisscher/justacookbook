@@ -1,0 +1,153 @@
+name: 🍳 Recipe Request
+description: Suggest a new recipe for Just a Cookbook
+title: "[Recipe Request]: "
+labels: ["recipe-request", "enhancement"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a recipe! We'd love to hear what you'd like to see in our cookbook.
+        
+        Please fill out the information below to help us understand your request.
+
+  - type: input
+    id: recipe-name
+    attributes:
+      label: Recipe Name
+      description: What's the name of the recipe you'd like to see?
+      placeholder: e.g., Classic Italian Carbonara
+    validations:
+      required: true
+
+  - type: dropdown
+    id: recipe-category
+    attributes:
+      label: Recipe Category
+      description: What type of recipe is this?
+      options:
+        - Main Course
+        - Side Dish
+        - Appetizer
+        - Soup / Stew
+        - Salad
+        - Dessert
+        - Breakfast / Brunch
+        - Snack
+        - Beverage
+        - Sauce / Condiment
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Recipe Description
+      description: Briefly describe the recipe and what makes it special
+      placeholder: Tell us about this recipe - what is it, where does it come from, what makes it delicious?
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this recipe?
+      description: Why would you like to see this recipe in the cookbook?
+      placeholder: What makes this recipe special to you? Is it a family favorite, a cultural tradition, or just incredibly delicious?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty Level
+      description: How difficult is this recipe to make?
+      options:
+        - Easy (< 30 minutes, basic techniques)
+        - Moderate (30-60 minutes, some skill required)
+        - Advanced (> 60 minutes, special techniques or equipment)
+        - Not sure
+    validations:
+      required: false
+
+  - type: dropdown
+    id: servings
+    attributes:
+      label: Typical Servings
+      description: How many people does this recipe typically serve?
+      options:
+        - "1-2 people"
+        - "2-4 people"
+        - "4-6 people"
+        - "6-8 people"
+        - "8+ people"
+        - "Not sure"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: dietary
+    attributes:
+      label: Dietary Considerations
+      description: Does this recipe fit any of these dietary categories? (Check all that apply)
+      options:
+        - label: Vegetarian
+        - label: Vegan
+        - label: Gluten-Free
+        - label: Dairy-Free
+        - label: Nut-Free
+        - label: Low-Carb / Keto
+        - label: Pescatarian
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: References or Links
+      description: Do you have any links to recipes, images, or other resources?
+      placeholder: |
+        Paste any helpful links here:
+        - Recipe inspiration
+        - Photos of the dish
+        - Cooking videos
+        - Cultural background
+    validations:
+      required: false
+
+  - type: textarea
+    id: ingredients
+    attributes:
+      label: Key Ingredients (Optional)
+      description: If you know some of the main ingredients, list them here
+      placeholder: |
+        e.g.,
+        - 500g pasta
+        - 200g bacon
+        - 4 eggs
+        - Parmesan cheese
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other information that might be helpful?
+      placeholder: Tips, variations, serving suggestions, or anything else we should know!
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contribution
+      description: By submitting this recipe request, you agree to the following
+      options:
+        - label: I have searched the existing recipes and issues to ensure this recipe hasn't already been requested
+          required: true
+        - label: I understand this is a request and there's no guarantee it will be added
+          required: true
+        - label: I'm willing to provide additional information if needed
+          required: true
+

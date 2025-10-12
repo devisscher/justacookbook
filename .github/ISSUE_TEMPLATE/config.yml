@@ -1,0 +1,9 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📖 View Cookbook
+    url: https://devisscher.github.io/justacookbook/
+    about: Visit the live cookbook to see all current recipes
+  - name: 💬 Discussions
+    url: https://github.com/devisscher/justacookbook/discussions
+    about: Ask questions, share ideas, or chat about recipes
+
