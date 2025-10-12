@@ -101,7 +101,7 @@ export default withPwa(defineConfig({
 
     // Footer
     footer: {
-      message: 'No ads, no popups, just recipes. <a href="https://github.com/devisscher/justacookbook/issues/new?template=recipe-request.yml" target="_blank" rel="noopener">Request a recipe</a>',
+      message: 'No ads, no popups, just recipes. <a href="https://github.com/devisscher/justacookbook/issues/new?template=recipe-request.yml" target="_blank" rel="noopener">Request a recipe</a> • <FooterInstallButton />',
       copyright: 'Made with ❤️ and VitePress'
     },
 
