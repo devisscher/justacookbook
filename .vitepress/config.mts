@@ -8,7 +8,7 @@ export default defineConfig({
   // GitHub Pages deployment configuration
   // If deploying to https://<USERNAME>.github.io/<REPO>/, set base to '/<REPO>/'
   // If deploying to https://<USERNAME>.github.io/, leave base as '/' or remove it
-  // base: '/justacookbook/', // Uncomment and update if needed
+  base: '/justacookbook/',
   
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -54,7 +54,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/devisscher/justacookbook' }
     ],
 
     // Document footer
