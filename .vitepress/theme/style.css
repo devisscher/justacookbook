@@ -1,0 +1,266 @@
+/**
+ * Custom Recipe Book Theme Styles
+ * Extends VitePress default theme with recipe-specific styling
+ */
+
+/* ==========================================
+   Color Palette - Warm & Appetizing
+   ========================================== */
+:root {
+  /* Recipe-friendly colors */
+  --vp-c-brand-1: #d97706;
+  --vp-c-brand-2: #f59e0b;
+  --vp-c-brand-3: #fbbf24;
+  --vp-c-brand-soft: rgba(251, 191, 36, 0.14);
+  
+  /* Accent colors */
+  --recipe-accent: #dc2626;
+  --recipe-green: #059669;
+  --recipe-cream: #fef3c7;
+  --recipe-warm-bg: #fffbeb;
+  
+  /* Typography */
+  --recipe-font-serif: 'Georgia', 'Times New Roman', serif;
+}
+
+.dark {
+  --vp-c-brand-1: #fbbf24;
+  --vp-c-brand-2: #f59e0b;
+  --vp-c-brand-3: #d97706;
+  --recipe-warm-bg: #292524;
+  --recipe-cream: #44403c;
+}
+
+/* ==========================================
+   Typography Improvements
+   ========================================== */
+.vp-doc h1 {
+  font-family: var(--recipe-font-serif);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  border-bottom: 2px solid var(--vp-c-brand-1);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.vp-doc h2 {
+  font-family: var(--recipe-font-serif);
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.vp-doc h3 {
+  font-family: var(--recipe-font-serif);
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+/* Recipe metadata (servings, time, etc.) */
+.vp-doc p em {
+  color: var(--vp-c-text-2);
+  font-size: 0.95em;
+  display: block;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--recipe-warm-bg);
+  border-left: 3px solid var(--vp-c-brand-1);
+  border-radius: 4px;
+}
+
+/* ==========================================
+   Recipe-Specific Styling
+   ========================================== */
+
+/* Ingredients Lists */
+.vp-doc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.vp-doc h2 + ul,
+.vp-doc h2 + p + ul {
+  margin-top: 1rem;
+}
+
+.vp-doc ul li {
+  position: relative;
+  padding: 0.5rem 0.75rem 0.5rem 2rem;
+  margin-bottom: 0.5rem;
+  background: var(--recipe-warm-bg);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.vp-doc ul li:hover {
+  background: var(--recipe-cream);
+  transform: translateX(2px);
+}
+
+.vp-doc ul li::before {
+  content: '🥄';
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  font-size: 1.1em;
+}
+
+/* Instructions Lists */
+.vp-doc ol {
+  counter-reset: recipe-step;
+  list-style: none;
+  padding-left: 0;
+}
+
+.vp-doc ol li {
+  counter-increment: recipe-step;
+  position: relative;
+  padding: 1rem 1rem 1rem 3.5rem;
+  margin-bottom: 1rem;
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+  border-left: 3px solid var(--vp-c-brand-1);
+  transition: all 0.2s ease;
+}
+
+.vp-doc ol li:hover {
+  border-left-color: var(--recipe-accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vp-doc ol li::before {
+  content: counter(recipe-step);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: var(--vp-c-brand-1);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.vp-doc ol li strong {
+  color: var(--vp-c-brand-1);
+}
+
+/* ==========================================
+   Recipe Cards (for index pages)
+   ========================================== */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.recipe-card {
+  background: var(--vp-c-bg-soft);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand-1);
+}
+
+.recipe-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-card p {
+  color: var(--vp-c-text-2);
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   Tips & Notes Sections
+   ========================================== */
+.vp-doc blockquote {
+  background: var(--recipe-warm-bg);
+  border-left: 4px solid var(--recipe-green);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+}
+
+.vp-doc blockquote p {
+  margin: 0.5rem 0;
+}
+
+/* ==========================================
+   Print Styles
+   ========================================== */
+@media print {
+  .VPNav,
+  .VPSidebar,
+  .VPFooter,
+  .VPDocFooter {
+    display: none !important;
+  }
+  
+  .vp-doc {
+    max-width: 100% !important;
+  }
+  
+  .vp-doc ol li,
+  .vp-doc ul li {
+    break-inside: avoid;
+  }
+  
+  .vp-doc h1,
+  .vp-doc h2,
+  .vp-doc h3 {
+    break-after: avoid;
+  }
+}
+
+/* ==========================================
+   Mobile Responsiveness
+   ========================================== */
+@media (max-width: 768px) {
+  .vp-doc h1 {
+    font-size: 1.75rem;
+  }
+  
+  .vp-doc ol li {
+    padding-left: 3rem;
+  }
+  
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   Custom Home Page Styling
+   ========================================== */
+.VPHero .name {
+  background: linear-gradient(120deg, var(--vp-c-brand-1), var(--recipe-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.VPFeature {
+  background: var(--vp-c-bg-soft);
+  transition: all 0.3s ease;
+}
+
+.VPFeature:hover {
+  background: var(--recipe-warm-bg);
+  transform: translateY(-2px);
+}
+
