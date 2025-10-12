@@ -6,6 +6,7 @@ import RecipeCard from './components/RecipeCard.vue'
 import RecipeImage from './components/RecipeImage.vue'
 import IngredientsList from './components/IngredientsList.vue'
 import InstructionsList from './components/InstructionsList.vue'
+import PWAInstallPrompt from './components/PWAInstallPrompt.vue'
 
 /** @type {import('vitepress').Theme} */
 export default {
@@ -13,6 +14,7 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      'layout-bottom': () => h(PWAInstallPrompt)
     })
   },
   enhanceApp({ app, router, siteData }) {

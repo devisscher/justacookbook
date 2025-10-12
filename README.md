@@ -8,6 +8,8 @@ A clean, beautiful recipe cookbook built with VitePress. Tired of scrolling thro
 
 - 🎨 **Beautiful Design** - Custom recipe-themed styling with warm, appetizing colors
 - 📱 **Responsive** - Works perfectly on desktop, tablet, and mobile
+- 📲 **Install as App** - Progressive Web App - install on your phone and use offline!
+- 🔌 **Offline Support** - Access recipes without internet after installing
 - 🔍 **Searchable** - Quick local search through all recipes
 - 🖨️ **Print-Friendly** - Optimized for printing recipes
 - 🖼️ **Recipe Images** - Support for hero images with captions and credits
@@ -115,6 +117,15 @@ justacookbook/
 ├── index.md                  # Homepage
 └── package.json
 ```
+
+## Progressive Web App
+
+This cookbook can be installed as a mobile app! Users can:
+- Install it on their home screen
+- Use recipes offline
+- Get an app-like experience
+
+See [PWA_GUIDE.md](./PWA_GUIDE.md) for complete details.
 
 ## Deployment
 
