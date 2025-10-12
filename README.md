@@ -17,8 +17,8 @@ A clean, beautiful recipe cookbook built with VitePress. Tired of scrolling thro
 
 ## Current Recipes
 
-- [Oven-Baked Leeks with Miso Chili Cream](./recipes/braised_leek.md)
-- [Lohikeitto (Finnish Salmon Soup)](./recipes/salmon_soup.md)
+- [Oven-Baked Leeks with Miso Chili Cream](./recipes/braised_leek)
+- [Lohikeitto (Finnish Salmon Soup)](./recipes/salmon_soup)
 
 ## Development
 
@@ -118,7 +118,7 @@ justacookbook/
 
 ## Deployment
 
-This cookbook is configured to automatically deploy to GitHub Pages. See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
+This cookbook is configured to automatically deploy to GitHub Pages. See [DEPLOYMENT.md](./DEPLOYMENT) for detailed instructions.
 
 **Quick steps:**
 1. Push to GitHub
@@ -145,7 +145,7 @@ The theme automatically styles standard Markdown:
 - Ordered lists as numbered instruction steps
 - Blockquotes as tips/notes
 
-See [.vitepress/theme/README.md](./.vitepress/theme/README.md) for complete theme documentation.
+See `.vitepress/theme/README.md` for complete theme documentation.
 
 ## Contributing
 
