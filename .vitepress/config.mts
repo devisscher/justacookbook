@@ -1,5 +1,16 @@
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import { loadRecipes, generateSidebar } from './recipeLoader.mts'
+import { generateRecipesIndexPlugin } from './plugins/generateRecipesIndex.mts'
+
+// Get __dirname equivalent in ES modules
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+// Load all recipes from the recipes directory
+const recipesDir = path.resolve(__dirname, '../recipes')
+const recipes = loadRecipes(recipesDir)
 
 // https://vitepress.dev/reference/site-config
 export default withPwa(defineConfig({
@@ -10,6 +21,13 @@ export default withPwa(defineConfig({
   // If deploying to https://<USERNAME>.github.io/<REPO>/, set base to '/<REPO>/'
   // If deploying to https://<USERNAME>.github.io/, leave base as '/' or remove it
   base: '/justacookbook/',
+  
+  // Vite configurations
+  vite: {
+    plugins: [
+      generateRecipesIndexPlugin(recipesDir)
+    ]
+  },
   
   // PWA Configuration
   pwa: {
@@ -82,16 +100,7 @@ export default withPwa(defineConfig({
       { text: 'Request Recipe', link: 'https://github.com/devisscher/justacookbook/issues/new?template=recipe-request.yml' }
     ],
 
-    sidebar: [
-      {
-        text: 'Recipes',
-        items: [
-          { text: 'All Recipes', link: '/recipes/' },
-          { text: 'Oven-Baked Leeks with Miso Chili Cream', link: '/recipes/braised_leek' },
-          { text: 'Lohikeitto (Finnish Salmon Soup)', link: '/recipes/salmon_soup' }
-        ]
-      }
-    ],
+    sidebar: generateSidebar(recipes),
 
     // Outline settings - perfect for jumping to ingredients/instructions
     outline: {

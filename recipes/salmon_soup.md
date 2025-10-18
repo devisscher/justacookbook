@@ -12,6 +12,8 @@ imageCredit: Photo by Unsplash
 
 *Serves 4-6 people*
 
+A comforting Finnish classic featuring tender salmon, potatoes, and fresh dill in a creamy broth. This hearty soup is perfect for cold days and tastes even better the next day.
+
 ## Ingredients
 
 - 500g fresh salmon fillet, skin removed, cut into chunks

@@ -12,6 +12,8 @@ imageCredit: Photo by Unsplash
 
 *Serves 2-3 people*
 
+A simple and delicious pasta dish that comes together in one pot for easy cleanup. This recipe combines tender vegetables, earthy mushrooms, and fresh spinach in a silky butter sauce, all finished with Parmesan cheese.
+
 ## Ingredients
 
 - 1/2 cup carrot, diced

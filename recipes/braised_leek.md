@@ -12,6 +12,8 @@ imageCredit: Photo by Unsplash
 
 *Serves 4 as a side dish or 2 as a main*
 
+A rich and savory dish combining the mild sweetness of leeks with the umami depth of miso and a spicy kick from chili sauce. Perfect as a side dish or vegetarian main course.
+
 ## Ingredients
 
 - 4 large leeks, white and light green parts only, cut into 2-inch barrel rounds
