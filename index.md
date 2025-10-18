@@ -10,11 +10,6 @@ hero:
     - theme: brand
       text: Browse Recipes
       link: /recipes/
-    - theme: alt
-      text: Oven-Baked Leeks
-      link: /recipes/braised_leek
-    - theme: alt
-      text: Finnish Salmon Soup
-      link: /recipes/salmon_soup
 ---
 
+<RecipeCards />

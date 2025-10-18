@@ -3,6 +3,7 @@ import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import RecipeCard from './components/RecipeCard.vue'
+import RecipeCards from './components/RecipeCards.vue'
 import RecipeImage from './components/RecipeImage.vue'
 import IngredientsList from './components/IngredientsList.vue'
 import InstructionsList from './components/InstructionsList.vue'
@@ -22,6 +23,7 @@ export default {
   enhanceApp({ app, router, siteData }) {
     // Register custom components globally
     app.component('RecipeCard', RecipeCard)
+    app.component('RecipeCards', RecipeCards)
     app.component('RecipeImage', RecipeImage)
     app.component('IngredientsList', IngredientsList)
     app.component('InstructionsList', InstructionsList)
