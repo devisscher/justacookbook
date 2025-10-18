@@ -60,7 +60,8 @@ defineProps({
   content: counter(recipe-step);
   position: absolute;
   left: 1.25rem;
-  top: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
   width: 2rem;
   height: 2rem;
   background: var(--vp-c-brand-1);
@@ -72,11 +73,12 @@ defineProps({
   font-weight: 700;
   font-size: 1em;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .instructions-list li:hover::before {
   background: var(--recipe-accent);
-  transform: scale(1.1);
+  transform: translateY(-50%) scale(1.1);
 }
 </style>
 
