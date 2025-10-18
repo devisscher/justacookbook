@@ -30,7 +30,7 @@ onMounted(() => {
   
   // Check if already in standalone mode (already installed)
   const isStandalone = window.matchMedia('(display-mode: standalone)').matches ||
-                       (window.navigator as any).standalone === true
+                       window.navigator['standalone'] === true
   
   if (isIOS && !isStandalone) {
     // Show prompt after 7 seconds (longer than regular prompt)
